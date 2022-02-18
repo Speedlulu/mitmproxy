@@ -82,6 +82,7 @@ def run(
             os.path.join(opts.confdir, "config.yaml"),
             os.path.join(opts.confdir, "config.yml"),
         )
+        opts.set(*args.setoptions, defer=True)
         process_options(parser, opts, args)
 
         if args.options:
